@@ -51,27 +51,30 @@ export default function SignUp() {
     }
   }
 
-  async function handleGithubSignUp(e: MouseEvent) {
-    e.preventDefault();
-    await authClient.signUp.({
-      provider: "github",
+  async function handleSocialSignUp(provider: string) {
+    await authClient.signIn.social({
+      provider: provider,
       callbackURL: "/dashboard",
     });
   }
+
   return (
     <div className="w-full">
       <div className="space-y-3 sm:space-y-0 sm:flex sm:flex-row sm:gap-3 mb-6 pb-6 border-b border-zinc-700">
-        <button className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base">
+        <button
+          className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base"
+          onClick={() => handleSocialSignUp("github")}
+        >
           <FaGithub size={18} className="sm:w-5 sm:h-5" />
           <span>Github</span>
         </button>
-        <Link
+        <button
           className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base"
-          href="/api/auth/callback/google"
+          onClick={() => handleSocialSignUp("google")}
         >
           <FaGoogle size={18} className="sm:w-5 sm:h-5" />
           <span>Google</span>
-        </Link>
+        </button>
         <Link
           className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base"
           href="/api/auth/callback/twitter"
