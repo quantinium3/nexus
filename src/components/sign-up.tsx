@@ -52,23 +52,16 @@ export default function SignUp() {
     }
   }
 
-<<<<<<< HEAD
-=======
   async function handleSocialSignUp(provider: string) {
     await authClient.signIn.social({
       provider: provider,
       callbackURL: "/dashboard",
     });
   }
->>>>>>> origin/quantinium
 
   return (
     <div className="w-full">
       <div className="space-y-3 sm:space-y-0 sm:flex sm:flex-row sm:gap-3 mb-6 pb-6 border-b border-zinc-700">
-<<<<<<< HEAD
-    
-        <Link
-=======
         <button
           className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base"
           onClick={() => handleSocialSignUp("github")}
@@ -77,7 +70,6 @@ export default function SignUp() {
           <span>Github</span>
         </button>
         <button
->>>>>>> origin/quantinium
           className="w-full sm:flex-1 border border-zinc-600 p-3 sm:p-2.5 md:p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors duration-200 text-sm sm:text-base"
           onClick={() => handleSocialSignUp("google")}
         >
