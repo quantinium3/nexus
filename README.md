@@ -1,1 +1,23 @@
 
+Nexus
+
+# UI
+- create a main page (will do it later. pro procastinator).
+- create a navbar for dashboard, file tree on left and content on current pane.
+- on the navbar have upload button which on clicking opens model or smth which user can press to upload or just drag and drop anywhere will just upload to current open directory.
+
+# AUTH
+- add better auth
+- when user sign up or sign in redirect to dashboard
+- on the navbar have the user profile icon which can do stuff and user can change his profile.
+- add a /profile page where there are many section related to profile.
+
+# DRIVE
+- figure out how to store data
+- figure out how to many different stuff which file such as showing them in dirs and all (most prolly tag them)
+- make the sharing possible with restrictions on them (idk think about it)
+
+# AI
+- have a button which open prompt window that has analyzed all data about the current user data acc to uploaded file and would answer them correctly. also provide the url from where the data has been fetched from
+- or user can right click on the file and provide him with options to do whatever he wants.
+
