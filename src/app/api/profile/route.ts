@@ -16,7 +16,7 @@ export async function PATCH(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { name, bio, pronouns, url, publicEmail } = body
+    const { name } = body
 
     await db
       .update(user)
