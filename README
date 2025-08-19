@@ -1,4 +1,3 @@
-
 Nexus
 
 # UI
@@ -20,4 +19,3 @@ Nexus
 # AI
 - have a button which open prompt window that has analyzed all data about the current user data acc to uploaded file and would answer them correctly. also provide the url from where the data has been fetched from
 - or user can right click on the file and provide him with options to do whatever he wants.
-
