@@ -20,7 +20,7 @@ export function ProfileHeader({ user }: ProfileHeaderProps) {
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-muted-foreground">Loading...</div>
+        <div className="text-cyan-500 text-2xl">Loading...</div>
       </div>
     )
   }
