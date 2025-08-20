@@ -35,10 +35,6 @@ export default function ProfilePage() {
     name: user.name,
     email: user.email,
     image: user.image,
-    bio: null,
-    pronouns: null,
-    url: null,
-    publicEmail: null,
   }
 
   return (
