@@ -18,3 +18,9 @@ Nexus
 # AI
 - have a button which open prompt window that has analyzed all data about the current user data acc to uploaded file and would answer them correctly. also provide the url from where the data has been fetched from
 - or user can right click on the file and provide him with options to do whatever he wants.
+
+have to create a google drive like storage using s3 that is secure.
+- we can create a s3 bucket - good.
+- we can get a presigned url for pushing the file from frontend to s3 automatically without needing to push to server - good thing
+- we can get a presigned url for getting the file and this can be stored in a kv store to store expired time - good thing
+- create a url shortener thatll redirect to that website
