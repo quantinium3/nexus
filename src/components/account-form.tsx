@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { authClient } from "@/lib/auth-client"
 
 interface AccountFormProps {
   user: {
@@ -29,6 +30,13 @@ export function AccountForm({ user }: AccountFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Account updated:", formData)
+  }
+
+  const handleUpdate = async () => {
+    await authClient.changeEmail({
+      newEmail: "himslash2005@gmail.com",
+      callbackURL: "/profile",
+    });
   }
 
   return (
@@ -69,7 +77,7 @@ export function AccountForm({ user }: AccountFormProps) {
                   </div>
                 </div>
 
-                <Button type="submit" className="bg-green-600 hover:bg-green-700">
+                <Button onClick={handleUpdate} type="submit" className="bg-green-600 hover:bg-green-700">
                   Update account
                 </Button>
               </form>
