@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 
 interface PublicProfileFormProps {
   user: {
@@ -23,6 +24,7 @@ export function PublicProfileForm({ user }: PublicProfileFormProps) {
     name: user.name || ""
   })
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -44,7 +46,8 @@ export function PublicProfileForm({ user }: PublicProfileFormProps) {
         throw new Error("Failed to update profile")
       }
 
-      toast.success("Profile updated successfully!")
+      toast.success("Name changed successfully!")
+      router.push("/profile")
     } catch (error) {
       console.error("Profile update error:", error)
       toast.error("Failed to update profile. Please try again.")
